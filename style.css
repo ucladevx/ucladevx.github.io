@@ -150,6 +150,9 @@ a {
   .home-container .content .lib_col > * {
     margin: 0 0 28px 0; }
 
+.home-container .content img {
+  height: 60px; }
+
 @media (min-width: 768px) {
   .home-container .content {
     position: absolute;
