@@ -130,14 +130,19 @@ a {
   color: #fff;
   position: fixed;
   top: 0;
-  z-index: 99; }
+  z-index: 99;
+  letter-spacing: 3px; }
   .navbar img {
     height: 19px; }
   .navbar a {
     text-decoration: inherit; }
+  .navbar .link-item {
+    margin-left: 10px; }
   @media (min-width: 768px) {
     .navbar {
-      padding: 20px 140px; } }
+      padding: 20px 140px; }
+      .navbar .link-item {
+        margin-left: 56px; } }
 
 .home-container .heading {
   display: flex;
