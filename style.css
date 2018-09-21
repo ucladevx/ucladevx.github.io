@@ -224,7 +224,7 @@ a {
   z-index: 1; }
   @media (min-width: 768px) {
     .home-container .heading {
-      height: calc(100% - 80px); } }
+      height: calc(100vh - 80px); } }
 
 .home-container .content .lib_col {
   align-items: center; }
