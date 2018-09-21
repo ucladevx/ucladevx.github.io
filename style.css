@@ -33,6 +33,12 @@ body {
   margin: 0;
   padding: 0; }
 
+html, body {
+  min-height: 100vh; }
+
+#mount {
+  min-height: 100vh; }
+
 a {
   color: inherit;
   text-decoration: none; }
@@ -122,27 +128,91 @@ a {
     .lib_section {
       padding: 140px; } }
 
-.navbar {
-  padding: 20px;
+.lib_container {
+  padding: 10px 40px 40px 40px;
+  background-color: #03022D;
+  min-height: calc(100vh - 80px);
+  color: #fff;
+  display: flex;
+  justify-content: center; }
+  @media (min-width: 768px) {
+    .lib_container {
+      padding: 40px 140px 140px 140px; } }
+
+.lib_container-body {
+  max-width: 1000px; }
+
+.navbar-container {
   height: 80px;
   width: 100%;
-  background: #03022D;
-  color: #fff;
-  position: fixed;
-  top: 0;
-  z-index: 99;
-  letter-spacing: 3px; }
-  .navbar img {
-    height: 19px; }
-  .navbar a {
-    text-decoration: inherit; }
-  .navbar .link-item {
-    margin-left: 10px; }
+  display: none; }
+  .navbar-container .navbar {
+    padding: 20px;
+    height: 80px;
+    width: 100%;
+    background: #03022D;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    letter-spacing: 3px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
+    .navbar-container .navbar img {
+      height: 19px; }
+    .navbar-container .navbar a {
+      text-decoration: inherit; }
+    .navbar-container .navbar .link-item {
+      margin-left: 10px; }
+    @media (min-width: 768px) {
+      .navbar-container .navbar {
+        padding: 20px 140px; }
+        .navbar-container .navbar .link-item {
+          margin-left: 56px; } }
   @media (min-width: 768px) {
-    .navbar {
-      padding: 20px 140px; }
-      .navbar .link-item {
-        margin-left: 56px; } }
+    .navbar-container {
+      display: block; } }
+
+.hamburger-menu {
+  padding: 10px; }
+  .hamburger-menu a {
+    margin: 10px; }
+
+.burger-menu,
+.burger-menu.open {
+  display: inline-block;
+  cursor: pointer;
+  position: fixed;
+  right: 20px;
+  top: 40px;
+  z-index: 9999;
+  background: #fff;
+  padding: 10px;
+  border-radius: 25px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3); }
+  @media (min-width: 768px) {
+    .burger-menu,
+    .burger-menu.open {
+      display: none; } }
+
+.burger-menu .bar1,
+.bar2,
+.bar3 {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: 0.4s; }
+
+.burger-menu.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-4px, 4px);
+  transform: rotate(-45deg) translate(-4px, 4px); }
+
+.burger-menu.open .bar2 {
+  opacity: 0; }
+
+.burger-menu.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -6px);
+  transform: rotate(45deg) translate(-6px, -6px); }
 
 .home-container .heading {
   display: flex;
@@ -152,6 +222,9 @@ a {
   color: #fff;
   height: 100vh;
   z-index: 1; }
+  @media (min-width: 768px) {
+    .home-container .heading {
+      height: calc(100% - 80px); } }
 
 .home-container .content .lib_col {
   align-items: center; }
@@ -205,98 +278,136 @@ a {
   width: 200px;
   margin-bottom: 24px; }
 
-.recruitment-container {
-  background: #03022D;
-  color: #fff;
-  padding: 80px 50px; }
-  @media (min-width: 576px) {
-    .recruitment-container {
-      padding: 80px; } }
-  @media (min-width: 992px) {
-    .recruitment-container {
-      padding: 80px 139px; } }
-  .recruitment-container .heading {
-    padding: 20px 0;
-    left: 139px;
-    z-index: 2; }
-  .recruitment-container .content .panel {
-    margin: 20px 0; }
-    .recruitment-container .content .panel .grid {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin: 40px 0; }
-    .recruitment-container .content .panel .name {
-      margin-bottom: 10px;
-      color: #F8CC29;
-      font-weight: 500; }
-    .recruitment-container .content .panel .role {
-      flex: 0 1 100%;
-      padding-right: 0px;
-      padding-bottom: 50px; }
-      @media (min-width: 768px) {
-        .recruitment-container .content .panel .role {
-          flex: 0 1 50%;
-          padding-right: 50px; } }
-      @media (min-width: 992px) {
-        .recruitment-container .content .panel .role {
-          flex: 0 1 33%;
-          padding-right: 50px; } }
-      .recruitment-container .content .panel .role .icon {
-        text-align: center;
-        height: 120px;
-        margin-bottom: 20px; }
-    .recruitment-container .content .panel .step {
-      flex: 0 1 100%;
-      padding-right: 0px;
-      margin-bottom: 50px; }
-      @media (min-width: 992px) {
-        .recruitment-container .content .panel .step {
-          flex: 0 1 50%;
-          padding-right: 50px; } }
-      .recruitment-container .content .panel .step .number-container {
-        display: inline-block;
-        margin-right: 20px; }
-        .recruitment-container .content .panel .step .number-container .number {
-          background-color: #fff;
-          color: #03022D;
-          border-radius: 50px;
-          height: 40px;
-          width: 40px;
-          text-align: center;
-          padding: 10px; }
-      .recruitment-container .content .panel .step .container-row {
-        display: flex;
-        flex-direction: row; }
-      .recruitment-container .content .panel .step .text-container {
-        display: inline-block; }
-    .recruitment-container .content .panel .date {
-      padding-right: 50px;
-      margin-bottom: 50px; }
-  .recruitment-container .content .jumbo {
+.recruitment_heading {
+  padding: 20px 0;
+  left: 139px;
+  z-index: 2; }
+
+.recruitment_content .panel {
+  margin: 20px 0; }
+  .recruitment_content .panel .grid {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap-reverse;
-    justify-content: space-between; }
-    @media (min-width: 0) {
-      .recruitment-container .content .jumbo .text-container {
-        flex: 0 1 100%; } }
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 40px 0; }
+  .recruitment_content .panel .name {
+    margin-bottom: 10px;
+    color: #F8CC29;
+    font-weight: 500; }
+  .recruitment_content .panel .role {
+    flex: 0 1 100%;
+    padding-right: 0px;
+    padding-bottom: 50px; }
+    @media (min-width: 768px) {
+      .recruitment_content .panel .role {
+        flex: 0 1 50%;
+        padding-right: 50px; } }
     @media (min-width: 992px) {
-      .recruitment-container .content .jumbo .text-container {
-        flex: 0 1 60%; } }
-    @media (min-width: 0) {
-      .recruitment-container .content .jumbo .img-container {
+      .recruitment_content .panel .role {
+        flex: 0 1 33%;
+        padding-right: 50px; } }
+    .recruitment_content .panel .role .icon {
+      text-align: center;
+      height: 120px;
+      margin-bottom: 20px; }
+  .recruitment_content .panel .step {
+    flex: 0 1 100%;
+    padding-right: 0px;
+    margin-bottom: 50px; }
+    @media (min-width: 992px) {
+      .recruitment_content .panel .step {
+        flex: 0 1 50%;
+        padding-right: 50px; } }
+    .recruitment_content .panel .step .number-container {
+      display: inline-block;
+      margin-right: 20px; }
+      .recruitment_content .panel .step .number-container .number {
+        background-color: #fff;
+        color: #03022D;
+        border-radius: 50px;
+        height: 40px;
+        width: 40px;
         text-align: center;
-        flex: 0 1 100%; }
-        .recruitment-container .content .jumbo .img-container img {
-          height: 300px;
-          margin-bottom: 30px; } }
-    @media (min-width: 992px) {
-      .recruitment-container .content .jumbo .img-container {
-        text-align: right;
-        flex: 0 1 40%; }
-        .recruitment-container .content .jumbo .img-container img {
-          height: auto;
-          margin-bottom: 50px; } }
+        padding: 10px; }
+    .recruitment_content .panel .step .container-row {
+      display: flex;
+      flex-direction: row; }
+    .recruitment_content .panel .step .text-container {
+      display: inline-block; }
+  .recruitment_content .panel .date {
+    padding-right: 50px;
+    margin-bottom: 50px; }
+
+.recruitment_content .jumbo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between; }
+  @media (min-width: 0) {
+    .recruitment_content .jumbo .text-container {
+      flex: 0 1 100%; } }
+  @media (min-width: 992px) {
+    .recruitment_content .jumbo .text-container {
+      flex: 0 1 60%; } }
+  @media (min-width: 0) {
+    .recruitment_content .jumbo .img-container {
+      text-align: center;
+      flex: 0 1 100%; }
+      .recruitment_content .jumbo .img-container img {
+        height: 300px;
+        margin-bottom: 30px; } }
+  @media (min-width: 992px) {
+    .recruitment_content .jumbo .img-container {
+      text-align: right;
+      flex: 0 1 40%; }
+      .recruitment_content .jumbo .img-container img {
+        height: auto;
+        margin-bottom: 50px; } }
+
+.projects_panel {
+  padding: 10px;
+  border-bottom: 1px solid #fff;
+  display: flex;
+  flex-flow: column;
+  align-items: center; }
+  .projects_panel .project_image {
+    padding: 20px;
+    min-height: 150px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center; }
+    .projects_panel .project_image img {
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
+      max-width: 300px; }
+    @media (min-width: 768px) {
+      .projects_panel .project_image {
+        flex: 1; } }
+  .projects_panel .projects_text {
+    margin: 20px 0;
+    text-align: justify;
+    white-space: pre-line; }
+    .projects_panel .projects_text h1 {
+      color: #F8CC29;
+      text-align: center; }
+      @media (min-width: 768px) {
+        .projects_panel .projects_text h1 {
+          text-align: left; } }
+    @media (min-width: 768px) {
+      .projects_panel .projects_text {
+        flex: 2;
+        margin: auto;
+        margin-left: 20px;
+        padding: 20px; }
+        .projects_panel .projects_text:nth-of-type(2n) {
+          margin: auto;
+          margin-right: 20px; } }
+  @media (min-width: 768px) {
+    .projects_panel {
+      flex-flow: row;
+      border-bottom: none; }
+      .projects_panel:nth-of-type(2n) {
+        flex-flow: row-reverse; } }
 
