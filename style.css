@@ -1,6 +1,11 @@
 body {
   font-family: "Raleway", sans-serif; }
-  body h1, body h2, body h3, body h4, body h5, body h6 {
+  body h1,
+  body h2,
+  body h3,
+  body h4,
+  body h5,
+  body h6 {
     font-style: normal;
     font-weight: normal;
     line-height: 30px; }
@@ -28,12 +33,15 @@ body {
     font-weight: 300;
     line-height: 23px; }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
   margin: 0;
   padding: 0; }
 
-html, body {
+html,
+body {
   min-height: 100vh; }
 
 #mount {
@@ -81,22 +89,22 @@ a {
   border-radius: 21.5px;
   overflow: hidden; }
   .lib_pill.yellow {
-    border: 2px solid #F8CC29; }
+    border: 2px solid #f8cc29; }
 
 .lib_pill-item {
   padding: 12px 20px; }
   .lib_pill-item.yellow {
-    color: #F8CC29; }
+    color: #f8cc29; }
     .lib_pill-item.yellow.fill {
-      background-color: #F8CC29;
-      color: #03022D; }
+      background-color: #f8cc29;
+      color: #03022d; }
   .lib_pill-item.white {
-    color: #03022D; }
+    color: #03022d; }
     .lib_pill-item.white.fill {
       background-color: #fff; }
 
 .lib_ellipse {
-  background: radial-gradient(300px at 50% 50%, rgba(9, 7, 100, 0.6) 0%, rgba(255, 255, 255, 0) 100%), #03022D;
+  background: radial-gradient(300px at 50% 50%, rgba(9, 7, 100, 0.6) 0%, rgba(255, 255, 255, 0) 100%), #03022d;
   height: 1068px;
   width: 1068px; }
 
@@ -122,7 +130,7 @@ a {
       width: auto;
       text-align: center; }
   .lib_section.blue {
-    background-color: #03022D;
+    background-color: #03022d;
     color: #fff; }
   @media (min-width: 768px) {
     .lib_section {
@@ -130,7 +138,7 @@ a {
 
 .lib_container {
   padding: 10px 40px 40px 40px;
-  background-color: #03022D;
+  background-color: #03022d;
   min-height: calc(100vh - 80px);
   color: #fff;
   display: flex;
@@ -149,7 +157,7 @@ a {
     padding: 20px;
     height: 80px;
     width: 100%;
-    background: #03022D;
+    background: #03022d;
     color: #fff;
     position: fixed;
     top: 0;
@@ -197,7 +205,7 @@ a {
 .bar3 {
   width: 25px;
   height: 3px;
-  background-color: #F8CC29;
+  background-color: #f8cc29;
   margin: 4px 0;
   transition: 0.4s; }
 
@@ -216,13 +224,10 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #03022D;
+  background: #03022d;
   color: #fff;
-  height: 100vh;
-  z-index: 1; }
-  @media (min-width: 768px) {
-    .home-container .heading {
-      height: calc(100vh - 80px); } }
+  z-index: 1;
+  height: calc(100vh - 80px); }
 
 .home-container .content .lib_col {
   align-items: center; }
@@ -246,7 +251,7 @@ a {
         letter-spacing: 4px; }
       .home-container .content .lib_col .lib_pill {
         background: #fff;
-        color: #03022D;
+        color: #03022d;
         letter-spacing: 3px; } }
 
 .home-container .ellipse-container {
@@ -287,11 +292,10 @@ a {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 40px 0; }
+    justify-content: space-between; }
   .recruitment_content .panel .name {
     margin-bottom: 10px;
-    color: #F8CC29;
+    color: #f8cc29;
     font-weight: 500; }
   .recruitment_content .panel .role {
     flex: 0 1 100%;
@@ -322,7 +326,7 @@ a {
       margin-right: 20px; }
       .recruitment_content .panel .step .number-container .number {
         background-color: #fff;
-        color: #03022D;
+        color: #03022d;
         border-radius: 50px;
         height: 40px;
         width: 40px;
@@ -341,7 +345,11 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap-reverse;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin-bottom: 20px; }
+  @media (min-width: 1200px) {
+    .recruitment_content .jumbo {
+      margin-bottom: 0; } }
   @media (min-width: 0) {
     .recruitment_content .jumbo .text-container {
       flex: 0 1 100%; } }
@@ -361,7 +369,7 @@ a {
       flex: 0 1 40%; }
       .recruitment_content .jumbo .img-container img {
         height: auto;
-        margin-bottom: 50px; } }
+        margin-bottom: 0; } }
 
 .projects_panel {
   padding: 10px;
@@ -385,10 +393,9 @@ a {
         flex: 1; } }
   .projects_panel .projects_text {
     margin: 20px 0;
-    text-align: justify;
     white-space: pre-line; }
     .projects_panel .projects_text h1 {
-      color: #F8CC29;
+      color: #f8cc29;
       text-align: center; }
       @media (min-width: 768px) {
         .projects_panel .projects_text h1 {
