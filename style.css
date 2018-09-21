@@ -144,8 +144,7 @@ a {
 
 .navbar-container {
   height: 80px;
-  width: 100%;
-  display: none; }
+  width: 100%; }
   .navbar-container .navbar {
     padding: 20px;
     height: 80px;
@@ -162,15 +161,16 @@ a {
     .navbar-container .navbar a {
       text-decoration: inherit; }
     .navbar-container .navbar .link-item {
-      margin-left: 10px; }
+      margin-left: 10px;
+      display: none; }
+      @media (min-width: 768px) {
+        .navbar-container .navbar .link-item {
+          display: block; } }
     @media (min-width: 768px) {
       .navbar-container .navbar {
         padding: 20px 140px; }
         .navbar-container .navbar .link-item {
           margin-left: 56px; } }
-  @media (min-width: 768px) {
-    .navbar-container {
-      display: block; } }
 
 .hamburger-menu {
   padding: 10px; }
@@ -183,7 +183,7 @@ a {
   cursor: pointer;
   position: fixed;
   right: 20px;
-  top: 40px;
+  top: 20px;
   z-index: 9999;
   background: #fff;
   padding: 10px;
